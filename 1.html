@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Định nghĩa keyframes cho hình ảnh */
+        @keyframes moveImage {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(700px); } 
+        }
+
+        /* Định nghĩa keyframes cho khối văn bản */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Áp dụng animation cho hình ảnh */
+        .animated-image {
+            width: 170px;
+            height: 170px;
+            position: relative;
+            top: 400px; 
+            animation-name: moveImage;
+            animation-duration: 4s;
+            animation-fill-mode: forwards; /* Giữ trạng thái cuối cùng */
+        }
+
+        /* Áp dụng animation cho khối văn bản */
+        .text-box {
+            position: absolute;
+            top: 170%; /* Điều chỉnh vị trí theo chiều dọc */
+            left: 700px; /* Vị trí cuối cùng của hình ảnh */
+            transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+            background-color: rgba(75, 219, 242, 0.8); /* Nền trắng mờ */
+            padding: 10px;
+            border: 1px solid #ccc;
+            opacity: 0; /* Bắt đầu với độ mờ */
+            animation-name: fadeIn;
+            animation-duration: 2s;
+            animation-delay: 4s; /* Bắt đầu sau khi animation của hình ảnh kết thúc */
+            animation-fill-mode: forwards; /* Giữ trạng thái cuối cùng */
+        }
+
+        /* Container để chứa cả hình ảnh và khối văn bản */
+        .container {
+            position: relative;
+            height: 200px; /* Chiều cao của container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://startv.vn/wp-content/uploads/2024/07/hinh-nen-capybabra-cute-xiu-6-1-2ee8c19b.jpg" class="animated-image" alt="Animated Image">
+        <div class="text-box">Chúc chị iu ngủ ngon.</div>
+    </div>
+</body>
+</html>
+<head>
+    <title>Gửi Chị Iu</title>
+    <style>
+        body {
+            background-image: url("https://hoanghamobile.com/tin-tuc/wp-content/webp-express/webp-images/uploads/2023/11/background-hinh-nen-powerpoint-de-thuong-thumb.jpg.webp");
+            background-size: cover; 
+            background-repeat: no-repeat; 
+        }
